@@ -1,0 +1,16 @@
+@import "~normalize-scss/sass/_normalize.scss";
+@include normalize();
+
+//bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap-grid";
+
+//helpers
+@import "styles/helpers/mixins/mixins";
+@import "styles/base/base";
+
+//components
+
+//layout
