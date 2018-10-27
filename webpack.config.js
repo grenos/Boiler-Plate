@@ -3,6 +3,7 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -128,6 +129,7 @@ module.exports = env => {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
+      new ErrorOverlayPlugin(),
       //
       new HtmlWebpackPlugin({
         title: 'Boiler',
@@ -151,21 +153,21 @@ module.exports = env => {
       //   template: './src/about-us.html'
       // }),
       //inject partials to html
-      new HtmlWebpackPartialsPlugin([
-        {
-          path: './src/modules_html/_head.html',
-          priority: 'high',
-          location: 'head'
-        }
-        // {
-        //   path: './src/modules_html/_visore.html',
-        //   priority: 'high',
-        //   location: 'body'
-        // },
-        // {
-        //   path: './src/modules_html/_test2.html'
-        // }
-      ]),
+      // new HtmlWebpackPartialsPlugin([
+      //   {
+      //     path: './src/modules_html/_head.html',
+      //     priority: 'high',
+      //     location: 'head'
+      //   }
+      // {
+      //   path: './src/modules_html/_visore.html',
+      //   priority: 'high',
+      //   location: 'body'
+      // },
+      // {
+      //   path: './src/modules_html/_test2.html'
+      // }
+      // ]),
       new ExtractTextPlugin({
         filename: 'styles/[name].css',
         allChunks: true,
@@ -181,7 +183,7 @@ module.exports = env => {
       })
     ],
 
-    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+    devtool: isProduction ? 'source-map' : 'eval',
     devServer: {
       hot: true,
       compress: true,

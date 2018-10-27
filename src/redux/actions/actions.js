@@ -9,7 +9,6 @@ import {
 } from './actionTypes';
 
 import axios from 'axios';
-import { RateLimiter } from 'limiter';
 import { push } from 'react-router-redux';
 
 const recipe = new RateLimiter(5, 'day');
