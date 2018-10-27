@@ -1,0 +1,195 @@
+.recipe-main__wrapper {
+  padding: 100px 0 50px 0;
+  min-height: 100vh;
+  background: white;
+}
+
+.recipe-main__back-link {
+  font-family: 'Alegreya', serif;
+  color: #259A35;
+  font-size: 1.7em;
+  font-style: italic;
+}
+
+.recipe-main__title {
+  background: #3CA55C;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #B5AC49, #3CA55C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  padding-top: 1em;
+}
+
+.author__title {
+  margin-left: 5px;
+}
+
+.author--quote-span {
+  font-family: 'Alegreya', serif;
+  color: #259A35;
+  font-style: italic;
+}
+
+.social__container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1em;
+}
+
+.social__some-network {
+  margin: 0 .5em 0 0;
+}
+
+.top-window-wrapper {
+  margin-bottom: 1em;
+}
+
+.top-window__img {
+  width: 100%;
+  height: auto;
+  border-radius: .25em;
+}
+
+.top-window__recipe-sum {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+.recipe-main__badges {
+  margin: 0 0 2em 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 1.4em;
+  font-family: 'Alegreya', serif;
+}
+
+.recipe-main__card {
+  margin: 1em 0 1em 0;
+  min-height: 200px;
+  max-height: 200px;
+  box-shadow: 1px 1px 10px #757575;
+}
+
+.card__body--top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 .5em 0 .5em;
+}
+
+.card__body--bottom {
+  max-height: 80px;
+  overflow: hidden;
+  padding: .5em;
+  text-align: center;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1em;
+}
+
+.recipe-instruction__list-item {
+  border: none;
+}
+
+.list-item__list-badges--size {
+  font-size: 1em;
+}
+
+.wines__list__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 1.5em 0;
+}
+
+.wine__list__titles {
+  font-size: 1.3em;
+  color: #259A35;
+  font-family: 'Alegreya', serif;
+  font-style: italic;
+  margin: .3em;
+}
+
+.wines__text {
+  font-family: inherit;
+}
+
+/* - - - HELPERS - - - */
+
+.make-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* - - -  ANIMATIONS - - -  */
+
+.anim-fa-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* - - - MEDIA QUERIES - - - */
+
+@media only screen and (max-device-width: 360px) {
+  .make-flex-row {
+    flex-direction: column;
+  }
+  .author__title {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-device-width: 576px) {
+  .top-window__recipe-sum {
+    max-height: inherit;
+  }
+  .recipe-main__wrapper {
+    padding: 85px 15px 50px 15px;
+  }
+  .recipe-main__title {
+    padding-top: .5em;
+  }
+  .top-window__img {
+    padding-bottom: 2em;
+  }
+}
+
+@media only screen and (min-device-width: 577px) {
+  .top-window__recipe-sum {
+    max-height: 190px;
+    overflow: scroll;
+    border-bottom: 1px solid #259A35;
+  }
+}
+
+@media only screen and (min-device-width: 769px) {
+  .top-window__recipe-sum {
+    max-height: 250px;
+    overflow: scroll;
+    border-bottom: 1px solid #259A35;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) {
+  .top-window__recipe-sum {
+    max-height: 400px;
+    overflow: scroll;
+    border-bottom: none;
+  }
+}

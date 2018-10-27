@@ -156,13 +156,15 @@ module.exports = env => {
           path: './src/modules_html/_head.html',
           priority: 'high',
           location: 'head'
-        },
-        {
-          path: './src/modules_html/_test.html'
-        },
-        {
-          path: './src/modules_html/_test2.html'
         }
+        // {
+        //   path: './src/modules_html/_visore.html',
+        //   priority: 'high',
+        //   location: 'body'
+        // },
+        // {
+        //   path: './src/modules_html/_test2.html'
+        // }
       ]),
       new ExtractTextPlugin({
         filename: 'styles/[name].css',
@@ -179,10 +181,9 @@ module.exports = env => {
       })
     ],
 
-    devtool: isProduction ? 'source-map' : 'eval',
+    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
     devServer: {
       hot: true,
-      // contentBase: path.join(__dirname, 'Public'),
       compress: true,
       historyApiFallback: true,
       stats: 'errors-only'

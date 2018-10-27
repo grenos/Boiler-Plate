@@ -1,0 +1,21 @@
+.navbar{
+  background-color: white;
+  box-shadow:  0 5px 15px #9e9e9e;
+}
+
+.navbar__logo{
+  width: 100px;
+}
+
+.navbar__icon--size{
+  font-size: 1.2em;
+}
+
+.navbar__icon--style {
+  color: green;
+  padding: .5rem 1rem;
+}
+
+.navbar__icon--style:hover{
+  color: orange;
+}

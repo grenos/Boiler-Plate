@@ -1,0 +1,98 @@
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .dashboard__main {
+    height: 50vh;
+  }
+  .dashboard__main--left {
+    height: 50vh;
+  }
+  .dashboard__main--right {
+    padding: 0;
+    height: 50vh;
+  }
+  .form__main {
+    height: 50vh;
+    width: 100vw;
+    border-radius: 0;
+    background: none;
+  }
+  .form__title {
+    color: #259A35;
+    font-size: 5vw;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media only screen and (max-device-width: 577px) {
+  .dashboard__main {
+    height: 50vh;
+  }
+  .dashboard__main--left {
+    height: 50vh;
+  }
+  .dashboard__main--right {
+    padding: 0;
+    height: 50vh;
+  }
+  .form__title {
+    color: #259A35;
+    font-size: 5vw;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+  }
+  .form__main {
+    width: 100vw;
+    height: 50vh;
+    background: none;
+  }
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .form__title {
+    color: #259A35;
+    font-size: 3vw;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+  }
+  .form__main {
+    height: 90vh;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .form__title {
+    color: #259A35;
+    font-size: 3vw;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+  }
+  .form__main {
+    height: 90vh;
+  }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .form__title {
+    color: #259A35;
+    font-size: 3vw;
+    margin-bottom: 1.5em;
+    font-weight: 300;
+  }
+  .form__main {
+    height: 90vh;
+  }
+}

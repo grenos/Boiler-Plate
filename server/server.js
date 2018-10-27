@@ -9,21 +9,9 @@ const port = process.env.PORT || 3000;
 // app.use(express.static(publicPath));
 app.use('/', expressStaticGzip(publicPath));
 
-// app.get('/dist/scripts/*.js', (req, res, next) => {
-//   req.url = req.url + '.gz';
-//   console.log(req.url);
-//   res.set('Content-Encoding', 'gzip');
-//   res.set('Content-Type', 'text/javascript');
-//   next();
-// });
-
-// app.get('/dist/styles/*.css', function(req, res, next) {
-//   req.url = req.url + '.gz';
-//   console.log(req.url);
-//   res.set('Content-Encoding', 'gzip');
-//   res.set('Content-Type', 'text/css');
-//   next();
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 app.listen(port, () => {
   console.log('server is running');

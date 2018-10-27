@@ -1,0 +1,62 @@
+.recipe-list__container {
+  padding: 70px 15px 50px 15px;
+  min-height: 100vh;
+}
+
+.recipe-data__title {
+  padding-bottom: .5em;
+}
+
+.recipe-data__title--span {
+  font-family: Alegreya;
+  font-size: 1em;
+  color: #259A35;
+}
+
+.formCard__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.formCard__form-group {
+  margin-right: 1em;
+}
+
+/* - - - Utilities - - -  */
+
+.no-p-sides {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* - - - MEDIA QUERIES - - - */
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media only screen and (max-device-width: 577px) {
+  .formCard__form {
+    flex-direction: column;
+  }
+  .formCard__form-group {
+    margin: 0 2em 1em 2em;
+  }
+  .recipe-data__title {
+    padding-left: 15px;
+  }
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .formCard__form-group {
+    margin: 0 1em 1em 1em;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .formCard__form-group {
+    margin: 0 1em 1em 1em;
+  }
+}
